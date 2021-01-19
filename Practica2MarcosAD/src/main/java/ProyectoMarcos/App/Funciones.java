@@ -134,15 +134,13 @@ public class Funciones {
 	 * @param c
 	 */
 	public static void mostrarTodosLosCliente(Connection c) {
-		System.out.println();
-		System.out.println("\t************* MOSTRAR TODOS LOS CLIENTES *************");
-		System.out.println();
-		String sql = "SELECT * FROM jardineria.cliente ORDER BY nombre_cliente ;";
+
+		String hql = "FROM jardineria.cliente ORDER BY nombre_cliente ;";
 		Statement st = null;
 		ResultSet rs = null;
 		try {
 			st = c.createStatement();
-			rs = st.executeQuery(sql);
+			rs = st.executeQuery(hql);
 			while (rs.next()) {
 				System.out.println("Cliente = [ " + rs.getString(1) + "  |  " + rs.getString(2) + "  |  "
 						+ rs.getString(3) + "  |  " + rs.getString(4) + "  |  " + rs.getString(5) + "  |  "
@@ -150,10 +148,27 @@ public class Funciones {
 						+ rs.getString(9) + "  |  " + rs.getString(10) + "  |  " + rs.getString(11) + "  |  "
 						+ rs.getString(12) + "  |  " + rs.getString(13) + "  |  " + rs.getString(14) + " ]");
 			}
-			System.out.println();
 		} catch (Exception e) {
-			e.printStackTrace();
+			// TODO: handle exception
 		}
+		
+		
+		/*
+		 * System.out.println();
+		 * System.out.println("\t************* MOSTRAR TODOS LOS CLIENTES *************"
+		 * ); System.out.println(); String sql =
+		 * "SELECT * FROM jardineria.cliente ORDER BY nombre_cliente ;"; Statement st =
+		 * null; ResultSet rs = null; try { st = c.createStatement(); rs =
+		 * st.executeQuery(sql); while (rs.next()) { System.out.println("Cliente = [ " +
+		 * rs.getString(1) + "  |  " + rs.getString(2) + "  |  " + rs.getString(3) +
+		 * "  |  " + rs.getString(4) + "  |  " + rs.getString(5) + "  |  " +
+		 * rs.getString(6) + "  |  " + rs.getString(7) + "  |  " + rs.getString(8) +
+		 * "  |  " + rs.getString(9) + "  |  " + rs.getString(10) + "  |  " +
+		 * rs.getString(11) + "  |  " + rs.getString(12) + "  |  " + rs.getString(13) +
+		 * "  |  " + rs.getString(14) + " ]"); } System.out.println(); } catch
+		 * (Exception e) { e.printStackTrace(); }
+		 */
+
 	}
 
 	/**
