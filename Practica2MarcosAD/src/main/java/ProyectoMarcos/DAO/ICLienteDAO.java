@@ -2,9 +2,9 @@ package ProyectoMarcos.DAO;
 
 import java.util.List;
 
-import ProyectoMarcos.MODEL.Empleado;
+import ProyectoMarcos.MODEL.Cliente;
 
-public interface IEmpleadoDAO<T> {
+public interface ICLienteDAO<T> {
 	
 	void insert(T cl);
 
@@ -14,6 +14,5 @@ public interface IEmpleadoDAO<T> {
 
 	List<T> getAll();
 	
-	Empleado getone(int id);
-
+	Cliente getone(int id);
 }

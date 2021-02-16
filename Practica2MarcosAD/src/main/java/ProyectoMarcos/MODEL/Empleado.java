@@ -11,6 +11,20 @@ public class Empleado {
 	private int codigo_jefe;
 	private String puesto;
 
+	public Empleado(int codigo_empleado, String nombre, String apellido1, String apellido2, String extension,
+			String email, int codigo_oficina, int codigo_jefe, String puesto) {
+		super();
+		this.codigo_empleado = codigo_empleado;
+		this.nombre = nombre;
+		this.apellido1 = apellido1;
+		this.apellido2 = apellido2;
+		this.extension = extension;
+		this.email = email;
+		this.codigo_oficina = codigo_oficina;
+		this.codigo_jefe = codigo_jefe;
+		this.puesto = puesto;
+	}
+	
 	// GETTERS AND SETTERS
 
 	public int getCodigo_empleado() {
@@ -85,4 +99,10 @@ public class Empleado {
 		this.puesto = puesto;
 	}
 
+	@Override
+	public String toString() {
+		return "Empleado [codigo_empleado=" + codigo_empleado + ", nombre=" + nombre + ", apellido1=" + apellido1
+				+ ", apellido2=" + apellido2 + ", extension=" + extension + ", email=" + email + ", codigo_oficina="
+				+ codigo_oficina + ", codigo_jefe=" + codigo_jefe + ", puesto=" + puesto + "]";
+	}
 }

@@ -17,10 +17,10 @@ public class Funciones {
 	public static void menu() {
 		System.out.println("\t************* ESCOJA LA OPCION QUE DESEA REALIZAR *************");
 		System.out.println("1.- Añade un cliente");
-		System.out.println("2.- Mostrar un cliente");
-		System.out.println("3.- Mostrar todos los clientes");
-		System.out.println("4.- Buscar cliente");
-		System.out.println("5.- Editar producto");
+		System.out.println("2.- Borrar un cliente");
+		System.out.println("3.- Actualizar un cliente");
+		System.out.println("4.- Mostrar un cliente");
+		System.out.println("5.- Mostrar todos los clientes");
 		System.out.println("6.- EXIT");
 		System.out.print("Opcion: ");
 	}
