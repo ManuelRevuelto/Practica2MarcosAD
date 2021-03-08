@@ -1,46 +1,61 @@
 package ProyectoMarcos.MODEL;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "empleado")
 public class Empleado {
-	private int codigo_empleado;
-	private String nombre;
+	@Id
+	@Column(name = "codigo_empleado")
+	private Long codigoEmpleado;
+	@Column(name = "nombre")
+	private String nombreCliente;
+	@Column(name = "apellido1")
 	private String apellido1;
+	@Column(name = "apellido2")
 	private String apellido2;
+	@Column(name = "extension")
 	private String extension;
+	@Column(name = "email")
 	private String email;
-	private int codigo_oficina;
-	private int codigo_jefe;
+	@Column(name = "codigo_oficina")
+	private String codigoOficina;
+	@Column(name = "codigo_jefe")
+	private Long codigoJefe;
+	@Column(name = "puesto")
 	private String puesto;
 
-	public Empleado(int codigo_empleado, String nombre, String apellido1, String apellido2, String extension,
-			String email, int codigo_oficina, int codigo_jefe, String puesto) {
-		super();
-		this.codigo_empleado = codigo_empleado;
-		this.nombre = nombre;
+	public Empleado(Long codigoEmpleado, String nombreCliente, String apellido1, String apellido2, String extension,
+			String email, String codigoOficina, Long codigoJefe, String puesto) {
+		this.codigoEmpleado = codigoEmpleado;
+		this.nombreCliente = nombreCliente;
 		this.apellido1 = apellido1;
 		this.apellido2 = apellido2;
 		this.extension = extension;
 		this.email = email;
-		this.codigo_oficina = codigo_oficina;
-		this.codigo_jefe = codigo_jefe;
+		this.codigoOficina = codigoOficina;
+		this.codigoJefe = codigoJefe;
 		this.puesto = puesto;
 	}
-	
+
 	// GETTERS AND SETTERS
-
-	public int getCodigo_empleado() {
-		return codigo_empleado;
+	public Long getCodigoCliente() {
+		return codigoEmpleado;
 	}
 
-	public void setCodigo_empleado(int codigo_empleado) {
-		this.codigo_empleado = codigo_empleado;
+	public void setCodigoCliente(Long codigoEmpleado) {
+		this.codigoEmpleado = codigoEmpleado;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getNombreCliente() {
+		return nombreCliente;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombreCliente(String nombreCliente) {
+		this.nombreCliente = nombreCliente;
 	}
 
 	public String getApellido1() {
@@ -75,20 +90,20 @@ public class Empleado {
 		this.email = email;
 	}
 
-	public int getCodigo_oficina() {
-		return codigo_oficina;
+	public String getCodigoOficina() {
+		return codigoOficina;
 	}
 
-	public void setCodigo_oficina(int codigo_oficina) {
-		this.codigo_oficina = codigo_oficina;
+	public void setCodigoOficina(String codigoOficina) {
+		this.codigoOficina = codigoOficina;
 	}
 
-	public int getCodigo_jefe() {
-		return codigo_jefe;
+	public Long getCodigoJefe() {
+		return codigoJefe;
 	}
 
-	public void setCodigo_jefe(int codigo_jefe) {
-		this.codigo_jefe = codigo_jefe;
+	public void setCodigoJefe(Long codigoJefe) {
+		this.codigoJefe = codigoJefe;
 	}
 
 	public String getPuesto() {
@@ -101,8 +116,8 @@ public class Empleado {
 
 	@Override
 	public String toString() {
-		return "Empleado [codigo_empleado=" + codigo_empleado + ", nombre=" + nombre + ", apellido1=" + apellido1
-				+ ", apellido2=" + apellido2 + ", extension=" + extension + ", email=" + email + ", codigo_oficina="
-				+ codigo_oficina + ", codigo_jefe=" + codigo_jefe + ", puesto=" + puesto + "]";
+		return "Cliente [apellido1=" + apellido1 + ", apellido2=" + apellido2 + ", codigoEmpleado=" + codigoEmpleado
+				+ ", codigoJefe=" + codigoJefe + ", codigoOficina=" + codigoOficina + ", email=" + email
+				+ ", extension=" + extension + ", nombreCliente=" + nombreCliente + ", puesto=" + puesto + "]";
 	}
 }
